@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+    .event{
+
+        pointer-events: none;
+    }
+
+body{
+ 
+    background: rgb(31, 74, 155);
+
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+ 
+    }
+    
+    .Start{
+        position: absolute;
+        top: 14rem;
+
+         padding: 6rem 15rem ;
+         background-color: rgba(35, 142, 161, 0.493);
+         border-radius: 1rem;
+
+         
+     }
+/*
+----- Win and Lose -----*/
+.Winner, .Loser{
+   position: absolute;
+   flex-direction: column;
+   top: 14rem;
+   left: 19rem;
+    padding: 6rem 15rem ;
+    background-color: rgba(35, 142, 161, 0.493);
+    border-radius: 1rem;
+    display: none;
+}
+
+.Winner ul, .Loser ul{
+    display: flex;
+}
+
+h1{
+    font-size:60px;
+    text-align: center;
+}
+/* --------------------- */
+li{
+         
+    text-align: center;
+    list-style: none;
+    font-size: 25px;
+    padding: 15px 35px;
+    margin: 1rem;
+    color: white;
+    background-color: rgb(42, 42, 155);
+    border: 3px solid rgb(62, 62, 153);
+    border-radius: 6px;
+    cursor: pointer;
+    
+    }
+
+.left {
+    height: 4rem;
+}
+
+.play{
+    text-align:center;
+}
+
+.replay{
+    position: absolute;
+    top: 0.45rem;
+    right: 0;
+    border-radius: 3px;
+    object-fit: cover;
+    height: 3rem;
+    padding: 0.7rem;
+    pointer-events: none;
+    
+}
+
+.card{  
+ 
+  
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+column-gap: 1rem;
+row-gap: 1.5rem;
+     width: auto;
+    height: auto;
+    perspective: 1000px;
+    margin: 0;
+
+}
+
+.cards{
+    width: 150px;
+    height: 200px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    transform-style: preserve-3d;
+
+}
+
+figure{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fig-front{
+    position: absolute;
+    border-radius: 10px;
+    border: 7px solid rgb(201, 201, 201);
+    color: white;
+    background: rgb(49, 49, 117);
+  height: 100%;
+  width: 100%;
+
+
+pointer-events: none;
+
+}
+
+.fig-back,.fig-front{
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.fig-back{
+    position: absolute;
+    background: rgb(62, 62, 153);
+    border: 2px solid rgb(201, 201, 201);
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    transform: rotateY( 180deg );
+    -webkit-transform: rotateY( 180deg );
+    pointer-events: none;
+}
+
+figure img{
+    border-radius: 3px;
+    object-fit: cover;
+    margin: 25px;
+    height: 50%;
+    width: 100%;
+    pointer-events: none;
+}
+
+.Timer{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 2rem;
+          
+}
+
+.clock{
+    border-radius: 3px;
+    object-fit: cover;
+    height: 3rem;
+    padding: 0.4rem;
+    pointer-events: none;
+}
+
+p{
+    color: white;
+    font-size: 20px;
+    font-weight: 800; 
+    transition: all 1s ease-in-out ;
+  
+}
+
+/*---------------------------For Mobile Devices--------------------*/
+
+@media Screen and (max-width: 680px) {
+    
+
+
+.container{
+    width: 45rem;
+    min-height: 80rem;
+    
+    }
+        
+.Start {
+    position: absolute;
+    top: 18rem;
+    
+
+}
+
+.Loser ,.Winner{
+    position: absolute;
+    flex-direction: column;
+    top: 18rem;
+    left: 2rem;
+     padding: 5rem 10rem ;
+     background-color: rgba(35, 142, 161, 0.493);
+     border-radius: 1rem;
+}
+
+.play p{
+    width: 8rem;
+    font-size: 25px;
+    text-align: center;
+}
+
+.play{
+    padding: 1rem;
+
+}
+h1{
+    font-size: 38px;
+}
+
+.Timer{
+    position: absolute;
+    top: 3rem;        
+
+}
+
+.card{  
+position: absolute;
+top: 10rem;
+perspective: 1000px;
+-webkit-perspective: 1000px;        
+
+
+}
+
+.card img{
+
+min-width: 6rem;
+min-height: 6rem;
+    
+}
+
+
+
+
+
+
+  }
